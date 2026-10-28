@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Aula de CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+
+<header>
+    <h1>Flexbox - Aula de CSS</h1>
+    <a href="index.html">⬅ Voltar ao Hub</a>
+</header>
+
+<main>
+    <section>
+        <h2>1. O que é Flexbox?</h2>
+        <p>
+            O Flexbox é um recurso do CSS utilizado para organizar,
+            alinhar e distribuir elementos dentro de um contêiner.
+            Ele facilita a criação de layouts flexíveis e responsivos.
+        </p>
+
+        <pre><code>.container {
+    display: flex;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>2. Direção dos elementos</h2>
+        <p>
+            A propriedade flex-direction define a direção em que
+            os elementos serão organizados.
+        </p>
+
+        <ul>
+            <li><code>row</code>: organiza os elementos em linha.</li>
+            <li><code>column</code>: organiza os elementos em coluna.</li>
+            <li><code>row-reverse</code>: inverte a ordem horizontal.</li>
+            <li><code>column-reverse</code>: inverte a ordem vertical.</li>
+        </ul>
+
+        <div class="demo-flex linha">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <pre><code>.container {
+    display: flex;
+    flex-direction: row;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>3. Centralização com Flexbox</h2>
+        <p>
+            O Flexbox é uma das formas mais modernas e simples de
+            centralizar elementos, tanto horizontal quanto verticalmente.
+        </p>
+
+        <div class="container-centralizacao">
+            <div class="item-centralizado">Centro</div>
+        </div>
+
+        <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>4. Alinhamento e espaçamento</h2>
+        <p>
+            A propriedade justify-content distribui os elementos
+            no eixo principal. A propriedade align-items controla
+            o alinhamento no eixo transversal.
+        </p>
+
+        <ul>
+            <li><code>center</code>: centraliza os elementos.</li>
+            <li><code>flex-start</code>: alinha no início.</li>
+            <li><code>flex-end</code>: alinha no final.</li>
+            <li><code>space-between</code>: distribui o espaço entre os itens.</li>
+        </ul>
+
+        <div class="demo-flex espacamento">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+
+        <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>5. Flex-wrap e gap</h2>
+        <p>
+            A propriedade flex-wrap permite que os elementos passem
+            para outra linha quando não houver espaço suficiente.
+            A propriedade gap define o espaço entre eles.
+        </p>
+
+        <div class="demo-flex quebra">
+            <div>Elemento 1</div>
+            <div>Elemento 2</div>
+            <div>Elemento 3</div>
+            <div>Elemento 4</div>
+            <div>Elemento 5</div>
+        </div>
+
+        <pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>6. Propriedades intermediárias</h2>
+        <p>
+            O Flexbox também permite controlar o tamanho e o
+            comportamento individual dos elementos.
+        </p>
+
+        <ul>
+            <li><code>flex-grow</code>: permite que o item cresça.</li>
+            <li><code>flex-shrink</code>: controla sua redução.</li>
+            <li><code>flex-basis</code>: define o tamanho inicial.</li>
+            <li><code>align-self</code>: altera o alinhamento de um item.</li>
+        </ul>
+
+        <pre><code>.item {
+    flex: 1 1 150px;
+}</code></pre>
+
+        <p>
+            Nesse exemplo, o elemento pode crescer ou diminuir,
+            começando com um tamanho de referência de 150 pixels.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Quando utilizar Flexbox?</h2>
+        <ul>
+            <li>Menus de navegação.</li>
+            <li>Alinhamento de botões.</li>
+            <li>Centralização de elementos.</li>
+            <li>Organização de cartões.</li>
+            <li>Layouts responsivos.</li>
+        </ul>
+
+        <p>
+            <a href="https://flexboxfroggy.com/">Pratique Flexbox com o Flexbox Froggy</a>
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Atividade prática</h2>
+        <p>Crie um contêiner que:</p>
+        <ul>
+            <li>Utilize display: flex.</li>
+            <li>Centralize os elementos.</li>
+            <li>Adicione espaço entre os itens.</li>
+            <li>Permita a quebra de linha.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>Desenvolvido por Prof. Dionatan Inhoato Markiu — © 2025</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Aula de CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+<header>
+    <h1>CSS Grid - Aula de CSS</h1>
+    <a href="index.html">⬅ Voltar ao Hub</a>
+</header>
+
+<main>
+    <section>
+        <h2>1. O que é CSS Grid?</h2>
+        <p>
+            CSS Grid é um sistema de layout que permite organizar
+            elementos em linhas e colunas. Ele facilita a criação
+            de estruturas organizadas para páginas e aplicações.
+        </p>
+
+        <pre><code>.container {
+    display: grid;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>2. Criando colunas</h2>
+        <p>
+            A propriedade grid-template-columns define a quantidade
+            e o tamanho das colunas.
+        </p>
+
+        <pre><code>.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}</code></pre>
+
+        <p>
+            A unidade fr divide o espaço disponível em frações.
+            Neste exemplo, as três colunas possuem a mesma proporção.
+        </p>
+
+        <div class="demo-grid tres-colunas">
+            <div>Coluna 1</div>
+            <div>Coluna 2</div>
+            <div>Coluna 3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Criando linhas</h2>
+        <p>
+            A propriedade grid-template-rows define a altura
+            das linhas da grade.
+        </p>
+
+        <pre><code>.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 140px;
+    gap: 10px;
+}</code></pre>
+
+        <div class="demo-grid linhas">
+            <div>Linha 1</div>
+            <div>Linha 1</div>
+            <div>Linha 2</div>
+            <div>Linha 2</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Espaçamento entre elementos</h2>
+        <p>
+            A propriedade gap define a distância entre as linhas
+            e colunas.
+        </p>
+
+        <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}</code></pre>
+
+        <p>
+            Também podemos utilizar row-gap para o espaço entre
+            linhas e column-gap para o espaço entre colunas.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Elementos ocupando mais espaço</h2>
+        <p>
+            As propriedades grid-column e grid-row permitem que
+            um elemento ocupe mais de uma coluna ou linha.
+        </p>
+
+        <div class="demo-grid destaque">
+            <div class="item-maior">Elemento maior</div>
+            <div>Elemento 2</div>
+            <div>Elemento 3</div>
+            <div>Elemento 4</div>
+        </div>
+
+        <pre><code>.item-maior {
+    grid-column: span 2;
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>6. Grid responsivo</h2>
+        <p>
+            As funções repeat(), auto-fit e minmax() ajudam
+            a adaptar as colunas ao espaço disponível na tela.
+        </p>
+
+        <pre><code>.container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}</code></pre>
+
+        <div class="demo-grid responsivo">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Quando utilizar Grid?</h2>
+        <ul>
+            <li>Galerias de imagens.</li>
+            <li>Painéis de informações.</li>
+            <li>Layouts completos de páginas.</li>
+            <li>Organização de cartões em linhas e colunas.</li>
+        </ul>
+
+        <p>
+            <a href="https://cssgridgarden.com/">Pratique Grid com o Grid Garden</a>
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Atividade prática</h2>
+        <p>Crie uma grade que:</p>
+        <ul>
+            <li>Tenha três colunas.</li>
+            <li>Possua duas ou mais linhas.</li>
+            <li>Utilize gap.</li>
+            <li>Tenha um elemento ocupando duas colunas.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>Desenvolvido por Prof. Dionatan Inhoato Markiu — © 2025</p>
+</footer>
+
+</body>
+</html>
